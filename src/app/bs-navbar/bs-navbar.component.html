@@ -1,25 +1,26 @@
-<div class="container-fluid">
+<div class="container-fluid bg-light">
   <div class="row">
-    <div class="navbar">
+    <div class="navbar bg-light">
       <div class="col-md-2">
         <span>Ecommerce</span>
       </div>
       <div class="col-md-10">
         <div class="float-right">
-            <i class="fa fa-shopping-cart px-2" aria-hidden="true"></i>
-            <i class="fa fa-user-o px-2" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart px-2" aria-hidden="true"></i>
+          <i class="fa fa-user-o px-2" aria-hidden="true"></i>
         </div>
       </div>
     </div>
 
-    <div class="col-md-2">
-      <span>Ecommerce</span>
-    </div>
-    <div class="col-md-10">
-      <div xclass="float-right">
-        <span>cart</span>
-        <span>Login</span>
-      </div>
+    <div class="container-fluid menu">
+      <ul>
+        <li (mouseenter) ="mouseEnter(productCategory) "  (mouseleave) ="mouseLeave(productCategory)" *ngFor="let productCategory of productCategories">
+          <span >{{ productCategory.name }}</span>
+          <i class="fa fa-angle-down down" aria-hidden="true"></i>
+          <i class="fa fa-angle-up up" aria-hidden="true"></i>
+          <app-subcategories [hidden]="!productCategory.show"></app-subcategories>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

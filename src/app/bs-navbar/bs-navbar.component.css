@@ -4,3 +4,43 @@
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
 }
+
+ul li{
+    display:inline-block;
+    padding:10px;
+    text-transform: uppercase;
+    color:#000000;
+    font-weight: 500;
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 0;
+    font-size: 14px;
+}
+
+ul {
+    justify-content: space-between;
+}
+
+.menu {
+    text-align: center;
+    max-height: 42px;
+}
+
+ul li span{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.up{
+    display:inline;
+}
+.down{
+    display:none;
+}
+ul li span:hover ~.up{
+    display:none
+}
+
+ul li span:hover ~ .down{
+    display:inline;
+}
+

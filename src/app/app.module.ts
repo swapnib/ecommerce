@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { SubcategoriesComponent } from './subcategories/subcategories.component';
 
 
 const appRoutes: Routes = [
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProductsComponent,
     ProductFormComponent,
-    BsNavbarComponent
+    BsNavbarComponent,
+    SubcategoriesComponent
   ],
   imports: [
     BrowserModule,
