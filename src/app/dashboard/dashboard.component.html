@@ -1,0 +1,11 @@
+<div class="row dbPanel">
+  <div class="dbChild" *ngFor="let banner of dashboard">
+    <h1 *ngIf="banner.type=='heading'">{{banner.title}}</h1>
+    <img *ngIf="banner.type=='banner'" [src]="banner.imageUrl">
+    <div class="row" *ngIf="banner.type=='smallBanner'">
+      <div *ngFor="let url of banner.imageUrl" class="col-md-4">
+        <img [src]="url" />
+      </div>
+    </div>
+  </div>
+</div>

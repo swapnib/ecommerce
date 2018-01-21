@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit,Input} from '@angular/core';
 
 @Component({
   selector: 'app-subcategories',
@@ -6,7 +6,9 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./subcategories.component.css']
 })
 export class SubcategoriesComponent implements OnInit {
+  @Input() tabs:any[];
   constructor() { }
   ngOnInit() {
+    console.log('tabs',this.tabs);
   }
 }

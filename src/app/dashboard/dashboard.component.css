@@ -1,6 +1,25 @@
-.badge-notify{
-    background:red;
-    position:relative;
-    top: -10px;
-    left: 0px;
- }
+.dbPanel{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+h1{
+    padding:0px 16px;
+    font-weight: 500;
+    font-size:18px;
+}
+
+img{
+    width:100%;
+    z-index: 20;
+    box-shadow: 5px 5px 15px #e2e1e1;
+}
+
+.dbChild{
+    padding-top:16px;
+    padding-bottom:0px;
+}
+.dbChild:last-child{
+    padding-top:16px;
+    padding-bottom:16px;
+}

@@ -1,0 +1,41 @@
+.row{
+    margin-left:0px;
+    margin-right:0px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.title{
+    text-align:center;
+    font-weight: 500;
+    padding:15px;
+    font-size: 18px; 
+    border-bottom:1px solid rgb(238, 237, 237);
+}
+
+.priceFilter span{
+    padding-right:5px;
+    padding-left:5px;
+}
+
+.priceFilter{
+    padding-bottom: 10px;
+}
+
+.custom-select {
+    max-width: 43%;
+    height: 30px;
+    font-size:13px;
+}
+
+.priceTitle{
+    font-size:14px;
+    padding:10px 0px;
+}
+
+.parentDiv{
+    border-bottom:1px solid rgb(238, 237, 237);
+}
+
+.options{
+    font-size:14px;
+}

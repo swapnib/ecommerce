@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12 title">Filters
+  </div>
+
+  <div class="col-md-12 parentDiv" *ngFor="let filter of filterInfo">
+    <div *ngIf="filter.type =='price'">
+      <div class="priceTitle">
+          {{filter.title | uppercase}}          
+      </div>
+      <nouislider [connect]="true" [min]="0" [max]="50" [step]="1" [(ngModel)]="someRange" (ngModelChange)="onChange($event)"></nouislider>
+      <div class="row priceFilter">
+        <select class="custom-select">
+          <option selected>Min</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <span>to</span>
+        <select class="custom-select">
+          <option selected>Max</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+    <div *ngIf="filter.type =='options'">
+      <div class="priceTitle">
+        <span>{{filter.title | uppercase}}</span>
+        <i  [hidden]="filter.show" class="fa fa-angle-down float-right" aria-hidden="true"></i>
+        <i  [hidden]="!filter.show" class="fa fa-angle-up float-right" aria-hidden="true"></i>
+      </div>
+      <div class="options">
+        <div *ngFor="let option of filter.options" class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [value]="option">{{option}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

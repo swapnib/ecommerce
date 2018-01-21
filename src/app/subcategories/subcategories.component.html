@@ -1,42 +1,13 @@
 <div class="cointainer row panel">
-  <div class="col-md-3">
-    <ul>
-      <li>Mobiles</li>
-      <li>Samsung</li>
-      <li>Lenovo</li>
-      <li>Mi</li>
-      <li>Oppo</li>
-      <li>One plus</li>
-    </ul>
-  </div>
-  <div class="col-md-3">
-    <ul>
-      <li>Mobiles</li>
-      <li>Samsung</li>
-      <li>Lenovo</li>
-      <li>Mi</li>
-      <li>Oppo</li>
-      <li>One plus</li>
-    </ul>
-  </div>
-  <div class="col-md-3">
-    <ul>
-      <li>Mobiles</li>
-      <li>Samsung</li>
-      <li>Lenovo</li>
-      <li>Mi</li>
-      <li>Oppo</li>
-      <li>One plus</li>
-    </ul>
-  </div>
-  <div class="col-md-3">
-    <ul>
-      <li>Mobiles</li>
-      <li>Samsung</li>
-      <li>Lenovo</li>
-      <li>Mi</li>
-      <li>Oppo</li>
-      <li>One plus</li>
-    </ul>
-  </div>
+  <ul>
+    <li class="child" *ngFor="let column of tabs.columns">
+      <ul>
+        <li [ngClass]="{'heading': item.type && item.type=='heading'}" *ngFor="let item of column">
+          <a [href]="item.url">{{item.title}}
+            <i class="fa fa-caret-right" *ngIf="item.type && item.type=='heading'" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="panel">
+    <div class="row">
+      <img [src]="productInfo.imgUrl" />
+    </div>
+    <span class="title">{{productInfo.title}}</span>
+    <div class="priceDiv">
+       <span class="discountPrice"><i class="fa fa-inr" aria-hidden="true"></i>{{productInfo.discountPrice}}</span>
+       <span class="price"><i class="fa fa-inr" aria-hidden="true"></i>{{productInfo.price}}</span>
+       <span class="text-success" style="font-weight:bold;">{{productInfo.discountPerc}}% off</span>
+    </div>
+    <div class="offer">
+        <span class="text-success" style="font-weight:bold;">Offer</span>
+        <span class="text-mute">{{productInfo.offer}}</span>
+     </div>
+     <div class="rating">
+        <button class="btn-success">{{productInfo.rating}}  <i class="fa fa-star" aria-hidden="true"></i></button>
+        <span class="review">( {{productInfo.noOfReview | number }} )</span>
+     </div>
+     <div class="size">
+        <span>Size:</span>
+        <span>{{productInfo.size}}</span>
+     </div>
+  </div>
+</div>

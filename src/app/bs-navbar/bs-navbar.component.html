@@ -1,6 +1,6 @@
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-primary">
   <div class="row">
-    <div class="navbar bg-light">
+    <div class="navbar">
       <div class="col-md-2">
         <span>Ecommerce</span>
       </div>
@@ -12,13 +12,13 @@
       </div>
     </div>
 
-    <div class="container-fluid menu">
+    <div class="container menu">
       <ul>
-        <li (mouseenter) ="mouseEnter(productCategory) "  (mouseleave) ="mouseLeave(productCategory)" *ngFor="let productCategory of productCategories">
-          <span >{{ productCategory.name }}</span>
-          <i class="fa fa-angle-down down" aria-hidden="true"></i>
-          <i class="fa fa-angle-up up" aria-hidden="true"></i>
-          <app-subcategories [hidden]="!productCategory.show"></app-subcategories>
+        <li (mouseenter) ="mouseEnter(productCategories.navData[productCategory]) "  (mouseleave) ="mouseLeave(productCategories.navData[productCategory])" *ngFor="let productCategory of categories">
+          <span >{{ productCategories.navData[productCategory].title}}</span>
+          <i  [hidden]="!productCategories.navData[productCategory].show" class="fa fa-angle-down"aria-hidden="true"></i>
+          <i  [hidden]="productCategories.navData[productCategory].show" class="fa fa-angle-up" aria-hidden="true"></i>
+          <app-subcategories  *ngIf="productCategories.navData[productCategory].tabs && productCategories.navData[productCategory].tabs[0]" [tabs]=productCategories.navData[productCategory].tabs[0] [hidden]="!productCategories.navData[productCategory].show"></app-subcategories>
         </li>
       </ul>
     </div>

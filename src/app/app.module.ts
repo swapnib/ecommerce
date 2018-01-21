@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { NouisliderModule } from 'ng2-nouislider';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,11 +11,14 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 import { RouterModule, Routes } from '@angular/router';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { SubcategoriesComponent } from './subcategories/subcategories.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { ProductComponent } from './product/product.component';
+import { FilterComponent } from './filter/filter.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'admin/product/New', component: ProductFormComponent }];
+  { path: 'admin/product/New', component: ProductFormComponent },
+  { path: 'products', component: ProductsComponent }];
 
 @NgModule({
   /**
@@ -26,11 +30,15 @@ const appRoutes: Routes = [
     ProductsComponent,
     ProductFormComponent,
     BsNavbarComponent,
-    SubcategoriesComponent
+    SubcategoriesComponent,
+    FooterComponent,
+    ProductComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,ReactiveFormsModule,NouisliderModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
